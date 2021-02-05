@@ -1,9 +1,9 @@
 # :Criando um setup para fazer um modelo de User personalizado:
 * #### Após criar o setup padrão do django, criaremos nossa pasta users, ou qualquer nome descritivo que quiser dar.
-######(venv) DIR > py manage.py startapp (nome-do-app)
+###### (venv) DIR > py manage.py startapp (nome-do-app)
 * #### Como mexeremos com tabelas, temos que usar os models primeiramente, além disso, como é um custom user, temos que importa o AbstractUser no módulo 'models'.
-######from django.contrib.auth.models import AbstractUser
-######from django.db import models
+###### from django.contrib.auth.models import AbstractUser
+###### from django.db import models
 * #### Fazer com que uma classe 'QualquerCoisaUser' herde(extends) da AbstractUser importada.
 ###### class QualquerCoisaUser(AbstractUser):
 * #### A classe ja está pronta para ser personalizada, campos podem ser adicionados à vontade, pra isso importamos os models (OBVIO)
@@ -14,7 +14,7 @@
 
 #### Lembrar de criar também uma variavel que remete ao nosso Modelo personalizado
 
-######AUTH_USER_MODEL = 'users.User'
+###### AUTH_USER_MODEL = 'users.User'
 
 * ### Fazer agora as migrações
 ###### py manage.py makemigratios user
